@@ -1,0 +1,19 @@
+[Unit]
+Description=OutFox
+After=network-online.target graphical.target
+Requires=graphical.target
+Wants=network-online.target
+ConditionKernelCommandLine=!installer
+
+[Service]
+Type=simple
+Environment=LC_ALL=C
+Environment=HOME=/storage
+Environment=DISPLAY=:0.0
+ExecStart=/opt/outfox/OutFox
+Restart=always
+RestartSec=2
+StartLimitInterval=0
+
+[Install]
+WantedBy=outfox.target
