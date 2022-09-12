@@ -11,7 +11,7 @@
   DISPLAYSERVER="x11"
 
 # Windowmanager to use (fluxbox / weston / no)
-  WINDOWMANAGER="fluxbox"
+  WINDOWMANAGER="no"
 
 # KODI Player implementation to use (mesa / default)
   KODIPLAYER_DRIVER="default"
