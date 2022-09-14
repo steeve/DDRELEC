@@ -14,8 +14,8 @@ PKG_LONGDESC="Project OutFox is an extensible rhythm game engine based on StepMa
 
 makeinstall_target() {
   mkdir -p ${INSTALL}/opt/outfox
-  # rm -rf Songs/*
   cp -frp * ${INSTALL}/opt/outfox/
+  rm -rf ${INSTALL}/opt/outfox/Songs/Outfox
   cp -fp ${PKG_DIR}/scripts/outfox.sh ${INSTALL}/opt/outfox/
 }
 
