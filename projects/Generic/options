@@ -31,6 +31,9 @@
   # Additional kernel dependencies
     KERNEL_EXTRA_DEPENDS_TARGET=""
 
+  # High speed peripheral polling
+    EXTRA_CMDLINE="usbhid.mousepoll=1 usbhid.jspoll=1 usbhid.kbpoll=1"
+
   # Kernel to use. values can be:
   # default:  default mainline kernel
     LINUX="default"
