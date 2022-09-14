@@ -16,7 +16,7 @@ makeinstall_target() {
   mkdir -p ${INSTALL}/opt/outfox
   cp -frp * ${INSTALL}/opt/outfox/
   rm -rf ${INSTALL}/opt/outfox/Songs/Outfox
-  cp -fp ${PKG_DIR}/scripts/outfox.sh ${INSTALL}/opt/outfox/
+  cp -fp ${PKG_DIR}/scripts/configure.sh ${INSTALL}/opt/outfox/
 }
 
 post_install() {
