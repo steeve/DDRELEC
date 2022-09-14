@@ -1,0 +1,12 @@
+[Unit]
+Description=Outfox SextetStream FIFO Consuming Service
+After=After=network.target outfox-sextetstream.socket
+Requires=outfox-sextetstream.socket
+ConditionKernelCommandLine=!installer
+
+[Service]
+Type=oneshot
+ExecStart=socat -u /tmp/outfox/StepMania-Lights-SextetStream.out UDP-DATAGRAM:localhost:5001
+
+[Install]
+WantedBy=outfox.target

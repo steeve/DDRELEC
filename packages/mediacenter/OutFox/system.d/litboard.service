@@ -1,0 +1,16 @@
+[Unit]
+Description=Litboard Service
+BindsTo=dev-litboard.device
+Requires=outfox-sextetstream.socket
+After=dev-litboard.device outfox-sextetstream.socket
+ConditionKernelCommandLine=!installer
+
+[Service]
+Type=simple
+ExecStart=socat -u UDP-LISTEN:5001 /dev/litboard,raw,echo=0,b115200
+Restart=always
+RestartSec=1
+StartLimitInterval=0
+
+[Install]
+WantedBy=outfox.target

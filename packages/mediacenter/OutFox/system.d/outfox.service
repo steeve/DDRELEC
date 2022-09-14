@@ -1,7 +1,7 @@
 [Unit]
 Description=OutFox
 After=network-online.target graphical.target
-Requires=graphical.target
+Requires=graphical.target outfox-sextetstream.socket
 Wants=network-online.target
 ConditionKernelCommandLine=!installer
 

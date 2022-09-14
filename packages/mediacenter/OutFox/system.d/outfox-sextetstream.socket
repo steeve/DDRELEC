@@ -1,0 +1,9 @@
+[Unit]
+Description=OutFox SextetStream FIFO
+ConditionKernelCommandLine=!installer
+
+[Socket]
+ListenFIFO=/tmp/outfox/StepMania-Lights-SextetStream.out
+
+[Install]
+WantedBy=outfox.target

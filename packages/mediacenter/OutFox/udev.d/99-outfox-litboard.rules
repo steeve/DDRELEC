@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="1a86", ENV{ID_MODEL_ID}=="7523", SYMLINK+="litboard", TAG+="systemd", ENV{SYSTEMD_WANTS}+="litboard.service"
